@@ -1,15 +1,16 @@
 <template>
-  <Suspense>
-    <FilePanel :directory="dir" @chdir="chdir" :key="dir" />
-  </Suspense>
+  <FilePanel :directory="dir" @chdir="chdir" :key="dir" />
+  <NewWin />
 </template>
 
 <script>
 import FilePanel from "./components/FilePanel.vue";
+import NewWin from "./components/NewWin.vue";
 export default {
   name: "App",
   components: {
     FilePanel,
+    NewWin,
   },
   data() {
     return {
